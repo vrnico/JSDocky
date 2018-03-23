@@ -1,0 +1,9 @@
+
+body {
+ background-image: url('https://media.giphy.com/media/TCiTkPAQQOHM4/giphy.gif');
+ -webkit-background-size: cover;
+ min-height: 100%;
+ overflow: scroll;
+  background-attachment:fixed;
+
+}
