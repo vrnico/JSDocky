@@ -42,11 +42,24 @@ If you are building this program using Windows add the line below into your pack
 
 ## Specifications
 
-1. #### Takes a users input as a search query
+1. #### Takes a users input as a search keyword
 
 | Input      | Output           |
 | ------------- |:-------------:|
 | Headache     | **Headache** |
+
+
+2. #### Takes a users input as a postal code
+
+| Input      | Output           |
+| ------------- |:-------------:|
+| 97212     | **97212** |
+
+2. #### References BetterDoctor API and displays search results
+
+| Input      | Output           |
+| ------------- |:-------------:|
+| Headache, 97212    | **Kaiser Permanente The Portland Clinic currently accepting patients in Portland OR** |
 
 
 
