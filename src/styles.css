@@ -4,6 +4,44 @@ body {
  -webkit-background-size: cover;
  min-height: 100%;
  overflow: scroll;
-  background-attachment:fixed;
+background-attachment:fixed;
+
+
+}
+
+.header{
+  font-family: 'Fredoka One', cursive;
+  font-size: 8em;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.keywords {
+  font-size: 2em;
+  color: red;
+}
+
+.container {
+  background-color: rgb(240,237,229, .7);
+  margin-top: .5em;
+  padding: 3em;
+}
+
+#searchDisplay {
+  list-style: none;
+  color: white;
+  font-size: 2em;
+}
+
+#searchDisplay a{
+  color: white;
+  font-size: 2em;
+}
+
+.in {
+  color: green;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1em;
 
 }
