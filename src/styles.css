@@ -16,9 +16,21 @@ background-attachment:fixed;
   text-shadow: 2px 2px 4px #000000;
 }
 
+.header a{
+text-decoration: none;
+color: white;
+}
+
+.header a:hover{
+text-decoration: none;
+color: #ebe1df;
+}
+
 .keywords {
+  font-family: 'Fredoka One', cursive;
   font-size: 2em;
-  color: red;
+  color: #e34132;
+  text-shadow: 2px 2px #FFFFFF;
 }
 
 .container {
@@ -34,14 +46,26 @@ background-attachment:fixed;
 }
 
 #searchDisplay a{
+  text-decoration: none;
   color: white;
   font-size: 2em;
 }
 
+#searchDisplay a:hover{
+  text-decoration: none;
+  color: #e34132;
+  font-size: 2em;
+  text-shadow: 2px 2px #FFFFFF;
+}
+
 .in {
-  color: green;
-  text-shadow: 2px 2px 4px #000000;
+  color: #bfd833;
+  text-shadow: 2px 2px black;
   font-family: 'Fredoka One', cursive;
   font-size: 1em;
 
+}
+
+.btn-lg {
+  margin-top: 1em;
 }

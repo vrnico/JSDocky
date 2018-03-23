@@ -11,7 +11,7 @@ export function Docky(keyword) {
       format: 'json'
     },
     success: function(response) {
-      $('#output').append(`<h3>Docky found <span class="keywords">` + response.data.length + `</span> doctors for <div class='keywords'>${keyword}</div></h3>`);
+      $('#output').append(`<h2>found <span class="keywords">` + response.data.length + `</span> doctors for <div class='keywords'>${keyword}</div></h2>`);
       if (response.data.length === 0) {
         $('.noResult').text('The search provided no matching results.')
       }
@@ -20,24 +20,26 @@ export function Docky(keyword) {
         let doctor = response.data[i].profile.last_name;
         let link = response.data[i].practices[0].website;
         let available = response.data[i].practices[0].accepts_new_patients;
+        let address = response.data[i].practices[0].visit_address.street;
+        let googleMaps = (`http://maps.google.com/maps?q=` + address);
+
         if(link === undefined){
-          link = "/"
+
+          link = googleMaps;
         }
         if(available === true){
-          available = '<span class="in">AVAILABLE</span>';
+          available = '<span class="in">available</span>';
         } else {
           available = "is NOT accepting new patients at this time";
         }
 
-        console.log("Dr." + doctor);
-
-        $('#output').append(`<a href='${link}'><h4>Dr.${doctor}</a>, ${available}</h4>`);
+        $('#output').append(`<a href='${link}' target='_blank'><h4>Dr.${doctor}</a>, ${available}</h4>`);
 
       }
 
     },
     error: function() {
-      $('.error').text(`We are having trouble handling your request!`)
+      $('.noResult').text(`We are having trouble handling your request!`)
     }
   });
 }
