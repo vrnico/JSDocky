@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export function Docky(keyword) {
   $.ajax({
     url:
-    `https://api.betterdoctor.com/2016-03-01/doctors?query=${keyword}&location=or-portland&skip=0&limit=100&user_key=${"a541d6a82003e4a2a97018e86811a19f"//process.env.exports.apiKey
-    }`,
+    `https://api.betterdoctor.com/2016-03-01/doctors?query=${keyword}&location=or-portland&skip=0&limit=100&user_key=${process.env.exports.apiKey}`,
     type: 'GET',
     data: {
       format: 'json'
@@ -15,7 +14,7 @@ export function Docky(keyword) {
       if (response.data.length === 0) {
         $('.noResult').text('The search provided no matching results.')
       }
-      console.log(response);
+      console.log(process.env.exports.apiKey);
       for (let i = 0; i < response.data.length; i++) {
         let doctor = response.data[i].profile.last_name;
         let link = response.data[i].practices[0].website;

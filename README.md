@@ -25,6 +25,10 @@ Initialize the configuraton process:
 npm install
 ```
 
+Create .env file in root directory and add in your API Key from https://developer.betterdoctor.com/
+```sh
+exports.apiKey=YOURAPIGOESHERE
+```
 Build the javascript project and import dependencies:
 ```sh
 npm run build
